@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=InstALLer
+GenericName=Instalador Portable
+Comment=Instalador y gestor visual de aplicaciones portables para Linux
+Exec=installer %U
+Icon=installer
+Terminal=false
+Categories=Utility;System;PackageManager;
+MimeType=application/x-compressed-tar;application/x-tar;application/x-xz;application/zip;
+StartupNotify=true
+StartupWMClass=io.github.installer.InstALLer
+Keywords=portable;tar;gz;xz;zip;install;installer;electron;app;

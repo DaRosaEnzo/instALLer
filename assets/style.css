@@ -1,0 +1,29 @@
+/* TarDrop Styling */
+
+.drop-card {
+    border: 2px dashed alpha(@accent_color, 0.45);
+    border-radius: 20px;
+    padding: 44px 28px;
+    background-color: alpha(@card_bg_color, 0.6);
+    transition: all 200ms ease;
+}
+
+.drop-card.drop-active {
+    border: 2px solid @accent_color;
+    border-radius: 20px;
+    background-color: alpha(@accent_color, 0.15);
+}
+
+.title-1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.dim-label {
+    opacity: 0.75;
+}
+
+.caption {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}

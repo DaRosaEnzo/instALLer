@@ -1,0 +1,41 @@
+name: installer
+base: core24
+version: '1.0.0'
+summary: Instalador y gestor visual de apps portables (.tar.gz, .zip) para Linux
+description: |
+  InstALLer es una herramienta nativa para Linux desarrollada con GTK4 y Libadwaita
+  que permite instalar y gestionar aplicaciones portables comprimidas (.tar.gz,
+  .tar.xz, .zip) o carpetas extraídas mediante una interfaz simple de arrastrar
+  y soltar (Drag & Drop).
+
+  Detecta automáticamente el ejecutable principal, configura permisos SUID para
+  aplicaciones Electron/Chromium (chrome-sandbox), asigna el mejor ícono y genera
+  el lanzador .desktop para que aparezca de inmediato en el menú de aplicaciones.
+
+grade: stable
+confinement: classic
+
+apps:
+  installer:
+    command: bin/installer-launcher
+    extensions: [gnome]
+    desktop: data/io.github.installer.InstALLer.desktop
+    environment:
+      PYTHONPATH: $SNAP:$PYTHONPATH
+
+parts:
+  installer:
+    plugin: dump
+    source: .
+    organize:
+      run.sh: bin/installer-launcher
+    stage-packages:
+      - python3
+      - python3-gi
+      - gir1.2-gtk-4.0
+      - gir1.2-adw-1
+      - desktop-file-utils
+      - tar
+      - xz-utils
+      - unzip
+      - policykit-1

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script para ejecutar InstALLer directamente desde el código fuente
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PYTHONPATH="${SCRIPT_DIR}:${PYTHONPATH}"
+
+exec python3 "${SCRIPT_DIR}/installer/main.py" "$@"
