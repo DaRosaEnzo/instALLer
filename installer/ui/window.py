@@ -36,7 +36,12 @@ class InstALLerWindow(Adw.ApplicationWindow):
 
     def _load_css(self) -> None:
         """Carga los estilos personalizados de InstALLer."""
-        css_file = Path(__file__).resolve().parent.parent.parent / "assets" / "style.css"
+        snap_root = os.environ.get("SNAP")
+        if snap_root and (Path(snap_root) / "assets" / "style.css").exists():
+            css_file = Path(snap_root) / "assets" / "style.css"
+        else:
+            css_file = Path(__file__).resolve().parent.parent.parent / "assets" / "style.css"
+
         if css_file.exists():
             provider = Gtk.CssProvider()
             try:

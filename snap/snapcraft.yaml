@@ -38,4 +38,4 @@ parts:
       - tar
       - xz-utils
       - unzip
-      - policykit-1
+      - pkexec

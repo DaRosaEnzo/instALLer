@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <!-- Gradiente de fondo del squircle -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c71d8" />
+      <stop offset="100%" stop-color="#0e3d7b" />
+    </linearGradient>
+
+    <!-- Gradiente de la caja/paquete -->
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#d0e2ff" />
+    </linearGradient>
+
+    <!-- Gradiente de la flecha / drop -->
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#33d17a" />
+      <stop offset="100%" stop-color="#26a269" />
+    </linearGradient>
+
+    <!-- Sombra sutil -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Base Squircle redondeada estilo GNOME -->
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#bgGrad)" filter="url(#dropShadow)" />
+
+  <!-- Detalle superior de la caja / archivo comprimido -->
+  <!-- Tapa abierta de la caja -->
+  <path d="M 28 48 L 44 34 L 84 34 L 100 48 Z" fill="rgba(255,255,255,0.2)" />
+
+  <!-- Cuerpo de la caja / contenedor -->
+  <path d="M 28 48 L 100 48 L 94 98 L 34 98 Z" fill="url(#boxGrad)" filter="url(#dropShadow)" />
+
+  <!-- Pliegue y hendidura frontal -->
+  <path d="M 34 48 L 64 68 L 94 48" fill="none" stroke="#b0c4de" stroke-width="2" />
+  <line x1="64" y1="68" x2="64" y2="98" stroke="#b0c4de" stroke-width="2" />
+
+  <!-- Flecha de descarga / arrastre descendente (Drop) -->
+  <g transform="translate(64, 48)">
+    <!-- Barra vertical de la flecha -->
+    <rect x="-6" y="-30" width="12" height="26" rx="3" fill="url(#arrowGrad)" />
+    <!-- Punta de flecha -->
+    <polygon points="-18,-6 18,-6 0,16" fill="url(#arrowGrad)" />
+  </g>
+
+  <!-- Emblema de archivo comprimido .tar (Líneas de cierre / cremallera) -->
+  <rect x="58" y="24" width="12" height="3" rx="1.5" fill="#ffffff" opacity="0.9" />
+  <rect x="58" y="29" width="12" height="3" rx="1.5" fill="#ffffff" opacity="0.9" />
+  <rect x="58" y="34" width="12" height="3" rx="1.5" fill="#ffffff" opacity="0.9" />
+</svg>
