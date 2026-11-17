@@ -18,7 +18,7 @@ from gi.repository import Gtk, Adw, Gio, GLib
 from installer.constants import SUPPORTED_ARCHIVE_EXTENSIONS
 from installer.models import InstalledApp, AppPackageAnalysis
 from installer.registry import RegistryManager
-from installer.installer import AppInstaller
+from installer.core import AppInstaller
 from installer.extractor import prepare_source_package
 from installer.detector import analyze_package
 

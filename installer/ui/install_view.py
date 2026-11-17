@@ -17,7 +17,7 @@ from installer.constants import SUPPORTED_ARCHIVE_EXTENSIONS
 from installer.models import AppPackageAnalysis, CandidateBinary, InstalledApp
 from installer.extractor import prepare_source_package, ExtractionError
 from installer.detector import analyze_package
-from installer.installer import AppInstaller, InstallationError
+from installer.core import AppInstaller, InstallationError
 from installer.ui.review_dialog import ReviewDialog
 
 

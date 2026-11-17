@@ -30,7 +30,7 @@ from installer.detector import (
     analyze_package,
 )
 from installer.registry import RegistryManager
-from installer.installer import AppInstaller
+from installer.core import AppInstaller
 
 
 class TestInstALLerBackend(unittest.TestCase):

@@ -14,7 +14,7 @@ from gi.repository import Gtk, Adw, Gdk
 
 from installer.constants import APP_NAME, APP_COMMENT
 from installer.registry import RegistryManager
-from installer.installer import AppInstaller
+from installer.core import AppInstaller
 from installer.models import InstalledApp
 from installer.ui.install_view import InstallView
 from installer.ui.apps_view import AppsView
