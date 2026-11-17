@@ -4,6 +4,7 @@ Ventana principal con Libadwaita, ViewSwitcher para 'Instalar' y 'Apps Instalada
 y notificaciones flotantes con ToastOverlay.
 """
 
+import os
 from pathlib import Path
 from typing import Optional
 import gi
