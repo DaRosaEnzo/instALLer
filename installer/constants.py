@@ -11,8 +11,10 @@ APP_NAME = "InstALLer"
 APP_VERSION = "1.0.0"
 APP_COMMENT = "Instalador y gestor visual de aplicaciones portables para Linux"
 
-# Directorios de usuario
-USER_HOME = Path.home()
+# Directorios de usuario (compatible con ejecución normal y Snap clásico)
+_real_home_str = os.environ.get("SNAP_REAL_HOME") or os.environ.get("HOME")
+USER_HOME = Path(_real_home_str).resolve() if _real_home_str else Path.home()
+
 CONFIG_DIR = USER_HOME / ".config" / "installer"
 REGISTRY_FILE = CONFIG_DIR / "registry.json"
 
